@@ -14,10 +14,7 @@
     <div id="view-landing" class="min-h-screen bg-white flex flex-col items-center justify-center p-8 text-center view-section active">
         <div class="mb-12 animate-zoom-in">
             <div class="flex items-center gap-3">
-                <div class="relative flex items-center justify-center">
-                    <i data-lucide="heart" class="text-[#1a2b6d] w-20 h-20 stroke-[2] fill-none"></i>
-                    <i data-lucide="brain" class="absolute text-[#1a2b6d] w-10 h-10"></i>
-                </div>
+                <img src="iSpace_Logo.png" alt="iSpace Logo" style="width: 90px; height: 90px; object-fit: contain;">
                 <span class="text-6xl font-serif font-bold text-[#1a2b6d] tracking-tight">iSpace</span>
             </div>
         </div>
@@ -40,14 +37,13 @@
     <div id="view-mood" class="min-h-screen bg-[#f8f9fc] flex-col items-center justify-center p-6 view-section hidden">
         <div class="max-w-4xl w-full animate-fade-in">
             <div class="text-center mb-12 flex flex-col items-center">
-                <div class="flex items-center gap-3">
-                    <div class="relative flex items-center justify-center">
-                        <i data-lucide="heart" class="text-[#1a2b6d] w-10 h-10 stroke-[2] fill-none"></i>
-                        <i data-lucide="brain" class="absolute text-[#1a2b6d] w-5 h-5"></i>
+                <div class="flex justify-center mb-8">
+                    <div class="flex items-center gap-3">
+                        <img src="iSpace_Logo.png" alt="iSpace Logo" style="width: 42px; height: 42px; object-fit: contain;">
+                        <span class="text-3xl font-serif font-bold text-[#1a2b6d] tracking-tight">iSpace</span>
                     </div>
-                    <span class="text-3xl font-serif font-bold text-[#1a2b6d] tracking-tight">iSpace</span>
                 </div>
-                <h2 class="text-4xl font-serif font-bold text-[#1a2b6d] mt-8 mb-4">Bagaimana perasaanmu hari ini?</h2>
+                <h2 class="text-4xl font-serif font-bold text-[#1a2b6d] mb-4">Bagaimana perasaanmu hari ini?</h2>
                 <p class="text-gray-500 font-medium">Pilih kondisi emosimu untuk memulai refleksi.</p>
             </div>
             
@@ -63,10 +59,7 @@
     <div id="view-journal" class="min-h-screen flex-col bg-white view-section hidden">
         <div class="p-6 md:px-16 border-b flex justify-between items-center bg-white sticky top-0 z-20">
             <div class="flex items-center gap-3">
-                <div class="relative flex items-center justify-center">
-                    <i data-lucide="heart" class="text-[#1a2b6d] w-10 h-10 stroke-[2] fill-none"></i>
-                    <i data-lucide="brain" class="absolute text-[#1a2b6d] w-5 h-5"></i>
-                </div>
+                <img src="iSpace_Logo.png" alt="iSpace Logo" style="width: 42px; height: 42px; object-fit: contain;">
                 <span class="text-3xl font-serif font-bold text-[#1a2b6d] tracking-tight">iSpace</span>
             </div>
             <div class="hidden md:flex items-center gap-3 text-gray-400">
@@ -125,28 +118,42 @@
         </div>
     </div>
 
-    <div id="view-complete" class="fixed inset-0 bg-[#1a2b6d] z-50 flex items-center justify-center p-6 view-section hidden animate-fade-in">
-        <div class="max-w-3xl w-full bg-white p-12 md:p-20 rounded-[80px] text-center shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-4 bg-[#1a2b6d]"></div>
-            <div class="mb-10 flex justify-center">
-                <div class="flex items-center gap-3">
-                    <div class="relative flex items-center justify-center">
-                        <i data-lucide="heart" class="text-[#1a2b6d] w-20 h-20 stroke-[2] fill-none"></i>
-                        <i data-lucide="brain" class="absolute text-[#1a2b6d] w-10 h-10"></i>
+    <div id="view-complete" class="min-h-screen bg-[#f8f9fc] py-12 px-6 flex-col items-center justify-center animate-fade-in view-section hidden">
+        <div class="max-w-3xl w-full">
+            
+            <div class="text-center mb-10">
+                <div class="flex justify-center mb-6">
+                    <div class="flex items-center gap-3">
+                        <img src="iSpace_Logo.png" alt="iSpace Logo" style="width: 90px; height: 90px; object-fit: contain;">
+                        <span class="text-6xl font-serif font-bold text-[#1a2b6d] tracking-tight">iSpace</span>
                     </div>
-                    <span class="text-6xl font-serif font-bold text-[#1a2b6d] tracking-tight">iSpace</span>
+                </div>
+                <h2 class="text-4xl font-serif font-bold text-[#1a2b6d] mb-4">Refleksi Selesai.</h2>
+            </div>
+
+            <div class="bg-white rounded-[40px] shadow-xl p-8 md:p-14 mb-10 border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-3 bg-[#1a2b6d]"></div>
+                
+                <div class="flex items-center gap-4 mb-8 pb-8 border-b border-gray-100">
+                    <div class="w-14 h-14 bg-[#1a2b6d]/10 rounded-full flex items-center justify-center text-[#1a2b6d]">
+                        <i data-lucide="book-heart" class="w-[28px] h-[28px]"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#1a2b6d]">Catatan Untukmu Hari Ini</h3>
+                        <p id="summary-mood-label" class="text-gray-500 text-sm font-medium mt-1">Selesai memproses rasa...</p>
+                    </div>
+                </div>
+
+                <div id="summary-content" class="space-y-6 text-gray-700 text-lg md:text-xl font-serif leading-relaxed">
                 </div>
             </div>
-            <h2 class="text-4xl font-serif font-bold text-[#1a2b6d] mb-8 leading-tight">Refleksi Selesai.</h2>
-            <p class="text-xl text-gray-600 mb-12 italic leading-relaxed font-serif">
-                "Apa yang kamu rasakan hari ini akan berlalu, dan kamu masih memiliki dirimu sendiri serta kesempatan untuk mengubah semuanya menjadi lebih baik."
-            </p>
-            <div class="bg-[#f8f9fc] p-8 rounded-3xl mb-12 text-gray-500 text-sm italic">
-                Tidak apa-apa jika semuanya terasa berat, di sini kamu punya ruang aman untuk memahami setiap perasaanmu.
+
+            <div class="flex justify-center">
+                <button onclick="window.location.reload()" class="py-5 px-14 bg-[#1a2b6d] text-white text-xl font-bold rounded-full hover:bg-[#2a3b7d] transition-all shadow-lg hover:-translate-y-1">
+                    Tutup Ruang Aman
+                </button>
             </div>
-            <button onclick="window.location.reload()" class="w-full py-6 bg-[#1a2b6d] text-white text-2xl font-bold rounded-full hover:bg-[#2a3b7d] transition-all">
-                SIMPAN & TUTUP
-            </button>
+
         </div>
     </div>
 
